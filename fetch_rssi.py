@@ -20,7 +20,7 @@ if __name__ == "__main__":
         try:
             get_rssi()
         except ValueError:
-            print("registered ssid not found")
+            print("registered ssid not found here")
             pass
 
 
