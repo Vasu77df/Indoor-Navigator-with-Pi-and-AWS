@@ -1,13 +1,9 @@
-from math import pow, sqrt
-from fetch_rssi import get_rssi
-def distance_calc():
-    tx = -35
-    rssi = get_rssi()
-    ratio = tx - rssi
-    ratio_lin = pow(10, ratio/10)
+import rssi
+interface = 'wlp8s0'
+rssi_scanner = rssi.RSSI_Scan(interface)
+ssids = ['OnePlus']
 
-    d = sqrt(ratio_lin)
-    print(d)
+ap_info = rssi_scanner.getAPinfo(sudo=True)
+print(ap_info)
 
-if __name__ == '__main__':
-    distance_calc()
+
