@@ -1,5 +1,5 @@
 import subprocess as sb
-
+from time import sleep
 
 def get_rssi():
     cmnd = " sudo iw wlp8s0 scan|egrep 'SSID|signal'"
@@ -20,7 +20,9 @@ if __name__ == "__main__":
         try:
             get_rssi()
         except ValueError:
+
             print("registered ssid not found here")
+            sleep(5)
             pass
 
 
