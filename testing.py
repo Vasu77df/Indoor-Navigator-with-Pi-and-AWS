@@ -9,6 +9,14 @@ privateKeyPath = "PiZeroNode.private.key"
 topic = "zero/node"
 
 
+def customCallback(client, userdata, message):
+    print("Received a new message: ")
+    print(message.payload)
+    print("from topic: ")
+    print(message.topic)
+    print("--------------\n\n")
+
+
 myAWSIoTMQTTClient = AWSIoTMQTTClient("myClientID")
 myAWSIoTMQTTClient.configureEndpoint("a1jgcb96hr49vu-ats.iot.eu-west-1.amazonaws.com", 8883)
 myAWSIoTMQTTClient.configureCredentials(rootCAPath, privateKeyPath, certificatePath)
@@ -22,9 +30,11 @@ myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 # Connect and subscribe to AWS IoT
 myAWSIoTMQTTClient.connect()
-
+myAWSIoTMQTTClient.subscribe("zero/node", 1, customCallback())
+time(2)
 # Publish to the same topic in a loop forever
 loopCount = 0
+
 while True:
     message = {"loopCount": loopCount}
     messageJson = json.dumps(message)
