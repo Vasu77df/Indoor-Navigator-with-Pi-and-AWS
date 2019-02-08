@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronode.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronode.py" afterDir="false" />
-    </list>
+    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,12 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549608585395</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="remove extra print">
+      <created>1549610031254</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549610031254</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.10226674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,7 +386,8 @@
     <MESSAGE value="getting rssi and sending to aws iot for pi three node" />
     <MESSAGE value="getting rssi and sending to aws iot for pi zero node" />
     <MESSAGE value="getting rssi and sending to aws iot for pi zero node now working" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting rssi and sending to aws iot for pi zero node now working" />
+    <MESSAGE value="remove extra print" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove extra print" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
