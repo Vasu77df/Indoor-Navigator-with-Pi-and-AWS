@@ -30,12 +30,11 @@ myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 # Connect and subscribe to AWS IoT
 myAWSIoTMQTTClient.connect()
-myAWSIoTMQTTClient.subscribe("zero/node", 1, customCallback())
-time.sleep(2)
 # Publish to the same topic in a loop forever
 loopCount = 0
 
 while True:
+    myAWSIoTMQTTClient.subscribe("three/node", 1, customCallback)
     message = {"loopCount": loopCount}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
