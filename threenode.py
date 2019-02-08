@@ -12,7 +12,7 @@ topic = "three/node"
 
 #getting rssi values from nearby devices
 def get_apinfo():
-    cmnd = " sudo iw wlp8s0 scan|egrep 'SSID|signal'"
+    cmnd = " sudo iw wlan0 scan|egrep 'SSID|signal'"
     net = sb.run(cmnd, shell=True, stdout=sb.PIPE, stderr=sb.STDOUT)
 
     net_out = net.stdout
