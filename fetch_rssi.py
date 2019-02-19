@@ -1,6 +1,6 @@
 import subprocess as sb
 from time import sleep
-import re
+from re import findall
 def get_apinfo():
     cmnd = " sudo iwlist wlp8s0 scan|egrep 'Address|Signal level'"
     net = sb.run(cmnd, shell=True, stdout=sb.PIPE, stderr=sb.STDOUT)
@@ -16,9 +16,8 @@ def rssi_parser(net_out):
     if reg_user in net_out:
         ssid_pos = net_out.index('94:65:2D:CB:55:8C')
         rssi_value = net_out[ssid_pos + 3]
-        rssi_value = re.findall(r"[-+]?\d*\.\d+|\d+", rssi_value)
-        print(rssi_value)
-        print(type(rssi_value))
+        rssi_value = findall(r"[-+]?\d*\.\d+|\d+", rssi_value)
+        rssi_value = float(rssi_value[0])
     else:
         rssi_value = 0
         sleep(5)
