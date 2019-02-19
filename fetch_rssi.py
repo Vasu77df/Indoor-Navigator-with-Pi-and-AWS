@@ -2,7 +2,7 @@ import subprocess as sb
 from time import sleep
 
 def get_apinfo():
-    cmnd = " sudo iw wlp8s0 scan|egrep 'SSID|signal'"
+    cmnd = " sudo iwlist wlp8s0 scan|egrep 'Address|Signal level'"
     net = sb.run(cmnd, shell=True, stdout=sb.PIPE, stderr=sb.STDOUT)
     net_out = net.stdout
     net_out = net_out.decode('utf-8')
