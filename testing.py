@@ -3,17 +3,15 @@ import time
 
 
 
+
 rootCAPath = "root-CA.crt"
 certificatePath = "PiZeroNode.cert.pem"
 privateKeyPath = "PiZeroNode.private.key"
 topic = "zero/node"
-
-
 def customCallback(client, userdata, message):
     print("Received a new message: ")
     print(message.payload)
     rssi_value = message.payload
-    print
     print("from topic: ")
     print(message.topic)
     print("--------------\n\n")

@@ -2,6 +2,8 @@ import subprocess as sb
 from time import sleep
 
 def get_apinfo():
+    '''scans all available wifi networks and returns a list of the ssids and rssi
+    values'''
     cmnd = " sudo iw wlp8s0 scan|egrep 'SSID|signal'"
     net = sb.run(cmnd, shell=True, stdout=sb.PIPE, stderr=sb.STDOUT)
 
@@ -13,6 +15,7 @@ def get_apinfo():
 
 
 def rssi_parser(net_out):
+    ''' parses the list and filters only the rssi value of registered ssid '''
     reg_user = 'OnePlus'
     if reg_user in net_out:
         ssid_pos = net_out.index('OnePlus')

@@ -12,6 +12,8 @@ topic = "zero/node"
 
 #getting rssi values from nearby devices
 def get_apinfo():
+    '''scans all available wifi networks and returns a list of the ssids and rssi
+     values'''
     cmnd = " sudo iw wlan0 scan|egrep 'SSID|signal'"
     net = sb.run(cmnd, shell=True, stdout=sb.PIPE, stderr=sb.STDOUT)
 
@@ -23,6 +25,7 @@ def get_apinfo():
 
 #filtering the rssi value for only registered ssid
 def rssi_parser(net_out):
+    ''' parses the list and filters only the rssi value of registered ssid '''
     reg_user = 'OnePlus'
     if reg_user in net_out:
         ssid_pos = net_out.index('OnePlus')
