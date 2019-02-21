@@ -6,7 +6,7 @@ from statistics import mean
 def topic_filter(rssi_value):
     rssi_value = rssi_value.decode('utf-8')
     rssi_value = json.loads(rssi_value)
-    rssi_value = rssi_value["rssi_zero_node"]
+    rssi_value = rssi_value["rssi_value"]
     rssi_value = float(rssi_value)
     return rssi_value
 
@@ -37,14 +37,25 @@ def customShadowCallback_Delete(payload, responseStatus, token):
 
 
 def customCallback(client, userdata, message):
+
     if message.topic == "rssi/zero":
         rssi_value = topic_filter(message.payload)
         rssi_val_zeronode = rssi_value
+        print(rssi_val_zeronode)
     elif message.topic == "rssi/three":
         rssi_value = topic_filter(message.payload)
         rssi_val_threenode = rssi_value
-    processing(rssi_val_zeronode, rssi_val_threenode)
+        print(rssi_val_threenode)
 
+    x = []
+    y = []
+    x.append(rssi_val_zeronode)
+    y.append(rssi_val_threenode)
+    if len(x) == 11:
+        processing(rssi_val_zeronode, rssi_val_threenode)
+    elif len(x) > 11:
+        x.clear()
+        y.clear()
 
 rootCAPath = "root-CA.crt"
 certificatePath = "PiThreeBNode.cert.pem"
@@ -68,17 +79,9 @@ deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thing
 deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 
 def processing(rssi_one, rssi_two):
-    x = []
-    y = []
-    if len(x) == 11:
-        x.clear()
-    if len(y) == 11:
-        x.clear()
-    x.append(rssi_one)
-    y.append(rssi_one)
-    node_one = mean(x)
-    node_two = mean(y)
-    print(node_one)
+    node_one = mean(rssi_one)
+    node_two = mean(rssi_two)
+    print("the first avg value is" + node_one)
     print(node_two)
 
 
