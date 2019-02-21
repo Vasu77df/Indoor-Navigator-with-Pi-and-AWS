@@ -1,6 +1,14 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 import time
 import json
+from statistics import mean
+
+def topic_filter(rssi_value):
+    rssi_value = rssi_value.decode('utf-8')
+    rssi_value = json.loads(rssi_value)
+    rssi_value = rssi_value["rssi_zero_node"]
+    rssi_value = float(rssi_value)
+    return rssi_value
 
 # Custom Shadow callback
 def customShadowCallback_Update(payload, responseStatus, token):
@@ -29,12 +37,13 @@ def customShadowCallback_Delete(payload, responseStatus, token):
 
 
 def customCallback(client, userdata, message):
-    print("Received a new message: ")
-    print(message.payload)
-    rssi_value = message.payload
-    print("from topic: ")
-    print(message.topic)
-    print("--------------\n\n")
+    if message.topic == "rssi/zero":
+        rssi_value = topic_filter(message.payload)
+        rssi_val_zeronode = rssi_value
+    elif message.topic == "rssi/three":
+        rssi_value = topic_filter(message.payload)
+        rssi_val_threenode = rssi_value
+    processing(rssi_val_zeronode, rssi_val_threenode)
 
 
 rootCAPath = "root-CA.crt"
@@ -58,7 +67,21 @@ deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thing
 # Delete shadow JSON doc
 deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 
-# Subcribe to other nodes and process the data and update device shadow for ALexa
+def processing(rssi_one, rssi_two):
+    x = []
+    y = []
+    if len(x) == 11:
+        x.clear()
+    if len(y) == 11:
+        x.clear()
+    x.append(rssi_one)
+    y.append(rssi_one)
+    node_one = mean(x)
+    node_two = mean(y)
+    print(node_one)
+    print(node_two)
+
 
 while True:
-    myMQTTClient.subscribe()
+    myMQTTClient.subscribe("rssi/#", 1, customCallback)
+    time.sleep(1)

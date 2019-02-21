@@ -57,7 +57,7 @@ myAWSIoTMQTTClient.connect()
 while True:
     net_info = get_apinfo()
     rssi = rssi_parser(net_info)
-    message = {"rssi_three_node": rssi}
+    message = {"rssi_value": rssi}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
     print('Published topic %s: %s\n' % (topic, messageJson))
