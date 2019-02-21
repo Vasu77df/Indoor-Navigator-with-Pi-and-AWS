@@ -8,7 +8,7 @@ from time import sleep
 rootCAPath = "root-CA.crt"
 certificatePath = "PiThreeNode.cert.pem"
 privateKeyPath = "PiThreeNode.private.key"
-topic = "three/node"
+topic = "rssi/three"
 
 #getting rssi values from nearby devices
 def get_apinfo():

@@ -8,7 +8,7 @@ from time import sleep
 rootCAPath = "root-CA.crt"
 certificatePath = "PiZeroNode.cert.pem"
 privateKeyPath = "PiZeroNode.private.key"
-topic = "zero/node"
+topic = "rssi/zero"
 
 #getting rssi values from nearby devices
 def get_apinfo():
