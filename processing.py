@@ -1,9 +1,11 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 import time
 import json
+import subprocess as sb
+from time import sleep
 from statistics import mean
 
-def topic_filter(rssi_value):
+def value_extracter(rssi_value):
     rssi_value = rssi_value.decode('utf-8')
     rssi_value = json.loads(rssi_value)
     rssi_value = rssi_value["rssi_value"]
@@ -37,25 +39,14 @@ def customShadowCallback_Delete(payload, responseStatus, token):
 
 
 def customCallback(client, userdata, message):
-
+    node_one = None
+    node_two = None
     if message.topic == "rssi/zero":
-        rssi_value = topic_filter(message.payload)
-        rssi_val_zeronode = rssi_value
-        print(rssi_val_zeronode)
+        node_one = value_extracter(message.payload)
+        print("node one value: %s" % node_one)
     elif message.topic == "rssi/three":
-        rssi_value = topic_filter(message.payload)
-        rssi_val_threenode = rssi_value
-        print(rssi_val_threenode)
-
-    x = []
-    y = []
-    x.append(rssi_val_zeronode)
-    y.append(rssi_val_threenode)
-    if len(x) == 11:
-        processing(rssi_val_zeronode, rssi_val_threenode)
-    elif len(x) > 11:
-        x.clear()
-        y.clear()
+        node_two = value_extracter(message.payload)
+        print("node two value: %s" % node_two)
 
 rootCAPath = "root-CA.crt"
 certificatePath = "PiThreeBNode.cert.pem"
@@ -78,13 +69,7 @@ deviceShadowHandler = myAWSIoTMQTTShadowClient.createShadowHandlerWithName(thing
 # Delete shadow JSON doc
 deviceShadowHandler.shadowDelete(customShadowCallback_Delete, 5)
 
-def processing(rssi_one, rssi_two):
-    node_one = mean(rssi_one)
-    node_two = mean(rssi_two)
-    print("the first avg value is" + node_one)
-    print(node_two)
-
-
 while True:
+    # subsribing to topic
     myMQTTClient.subscribe("rssi/#", 1, customCallback)
     time.sleep(1)
