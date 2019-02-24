@@ -58,7 +58,7 @@ while True:
     net_info = get_apinfo()
     rssi = rssi_parser(net_info)
     milli = int(round(time.time() * 1000))
-    message = {"rssi_value_three": rssi,
+    message = {"rssi_value_threeB": rssi,
                "time": milli}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
