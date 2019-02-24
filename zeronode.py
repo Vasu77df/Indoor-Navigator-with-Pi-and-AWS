@@ -52,13 +52,15 @@ myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)  # 5 sec
 # Connect to AWS IoT
 myAWSIoTMQTTClient.connect()
 # Publish to the same topic in a loop forever
-
+index = 0
 while True:
     net_info = get_apinfo()
     rssi = rssi_parser(net_info)
     milli = int(round(time.time()*1000))
-    message = {"rssi_value_zero": rssi,
-               "time": milli}
+    index += 1
+    message = {"index": index,
+                "rssi_value_zero": rssi,
+                "time": milli}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
     print('Published topic %s: %s\n' % (topic, messageJson))

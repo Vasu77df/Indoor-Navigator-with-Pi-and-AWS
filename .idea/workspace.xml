@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/threeB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threeB.py" beforeDir="false" afterPath="$PROJECT_DIR$/threeB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/threenode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zeronode.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronode.py" afterDir="false" />
     </list>
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/threenode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="63" column="40" lean-forward="true" selection-end-line="66" />
+            <state relative-caret-position="477">
+              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/threeB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="477">
+              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeronode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="297">
+              <caret line="54" selection-start-line="54" selection-end-line="66" selection-end-column="17" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -101,8 +101,8 @@
         <option value="$PROJECT_DIR$/fetch_rssi.py" />
         <option value="$PROJECT_DIR$/processing.py" />
         <option value="$PROJECT_DIR$/zeronode.py" />
-        <option value="$PROJECT_DIR$/threenode.py" />
         <option value="$PROJECT_DIR$/threeB.py" />
+        <option value="$PROJECT_DIR$/threenode.py" />
       </list>
     </option>
   </component>
@@ -334,14 +334,28 @@
       <option name="project" value="LOCAL" />
       <updated>1550928739473</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="three node code">
+      <created>1550979770129</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1550979770129</updated>
+    </task>
+    <task id="LOCAL-00023" summary="three node code">
+      <created>1550980021680</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1550980021680</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="27" width="960" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.37886873" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.37886873" />
       <window_info id="Structure" order="1" sideWeight="0.5049669" side_tool="true" weight="0.1839747" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,7 +368,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32937366" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50053364" side_tool="true" weight="0.3477322" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" sideWeight="0.4994664" visible="true" weight="0.3477322" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4994664" visible="true" weight="0.3477322" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,7 +470,8 @@
     <MESSAGE value="averaging and filtering" />
     <MESSAGE value="not working" />
     <MESSAGE value="basic" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic" />
+    <MESSAGE value="three node code" />
+    <option name="LAST_COMMIT_MESSAGE" value="three node code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py">
@@ -496,16 +511,6 @@
         <state relative-caret-position="-1196" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fetch_rssi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -516,20 +521,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zeronode.py">
+    <entry file="file://$PROJECT_DIR$/fetch_rssi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="58" selection-start-line="58" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="51" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threenode.py">
+    <entry file="file://$PROJECT_DIR$/zeronode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="63" column="40" lean-forward="true" selection-end-line="66" />
+        <state relative-caret-position="297">
+          <caret line="54" selection-start-line="54" selection-end-line="66" selection-end-column="17" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -538,8 +543,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/threeB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="477">
+          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threenode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
