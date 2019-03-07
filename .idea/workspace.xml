@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threeB.py" beforeDir="false" afterPath="$PROJECT_DIR$/threeB.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/threenode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zeronode.py" beforeDir="false" afterPath="$PROJECT_DIR$/zeronode.py" afterDir="false" />
-    </list>
+    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +22,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/threenode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
+            <state relative-caret-position="1005">
               <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
@@ -39,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/threeB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+            <state relative-caret-position="240">
+              <caret line="16" column="52" selection-end-line="68" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -348,12 +343,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550980021680</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="indexing for dynamoDB table for each node">
+      <created>1550999381107</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1550999381107</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="27" width="960" height="1053" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.37886873" />
       <window_info id="Structure" order="1" sideWeight="0.5049669" side_tool="true" weight="0.1839747" />
@@ -471,7 +472,8 @@
     <MESSAGE value="not working" />
     <MESSAGE value="basic" />
     <MESSAGE value="three node code" />
-    <option name="LAST_COMMIT_MESSAGE" value="three node code" />
+    <MESSAGE value="indexing for dynamoDB table for each node" />
+    <option name="LAST_COMMIT_MESSAGE" value="indexing for dynamoDB table for each node" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/aws-iot-device-sdk-python/samples/basicPubSub/basicPubSub.py">
@@ -541,9 +543,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threeB.py">
+    <entry file="file://$PROJECT_DIR$/threenode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
+        <state relative-caret-position="1005">
           <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
@@ -551,10 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threenode.py">
+    <entry file="file://$PROJECT_DIR$/threeB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+        <state relative-caret-position="240">
+          <caret line="16" column="52" selection-end-line="68" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
