@@ -1,23 +1,19 @@
 import boto3
+from boto3.dynamodb.conditions import Key, Attr
 
-dynamodb = boto3.resource('dynamodb')
+ddb = boto3.resource('dynamodb',
+                     region_name='eu-west-1'
+                     )
 
-threeBtable = dynamodb.Table('threeBdataTable')
-zerotable = dynamodb.Table('zeroDataTable')
 
-response = threeBtable.get_item(
-    Key={
-         'index': 11
-    }
+table = ddb.Table('threeBdataTable')
+
+response = table.scan(
+    FilterExpression=Attr('time').between(1551008923506, 1551008966690)
 )
 
-response_two = zerotable.get_item(
-    Key={
-         'index': 11
-    }
-)
 
-item = response['Item']
-item_two = response_two['Item']
+item = response['Items']
+
 print(item)
-print(item_two)
+print(type(item))
