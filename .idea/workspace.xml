@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/testing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -177,12 +176,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548590649108</updated>
     </task>
-    <task id="LOCAL-00001" summary="added file">
-      <created>1548590743613</created>
+    <task id="LOCAL-00001" summary="scanning the table successfully">
+      <created>1552229292314</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1548590743613</updated>
+      <updated>1552229292314</updated>
     </task>
     <task id="LOCAL-00002" summary="added code">
       <created>1548590799273</created>
@@ -345,11 +344,11 @@
       <option name="project" value="LOCAL" />
       <updated>1550999381107</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="960" height="1053" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.25933832" />
       <window_info id="Structure" order="1" sideWeight="0.5049669" side_tool="true" weight="0.1839747" />
@@ -438,6 +437,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="scanning the table successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="scanning the table successfully" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/fetch_rssi.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -489,7 +492,7 @@
     <entry file="file://$PROJECT_DIR$/testing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
