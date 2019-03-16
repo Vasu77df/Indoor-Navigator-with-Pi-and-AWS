@@ -1,7 +1,5 @@
 const Alexa = require('ask-sdk');
 
-
-
 const SKILL_NAME ;
 const GET_FACT_MESSAGE ;
 const HELP_MESSAGE;
@@ -10,6 +8,7 @@ const STOP_MESSAGE = '<say-as interpret-as="interjection">balle balle</say-as>' 
 
 function currentLocation() {
   var AWS = require("aws-sdk");
+  var now_time = require("microtime")
 
   AWS.config.update({
    region: "eu-west-1",
@@ -27,8 +26,8 @@ function currentLocation() {
    "#ix": "index",
    },
     ExpressionAttributeValues: {
-      ":first":1552565040980,
-      ":last":1552565087912
+      ":first":now_time.now() - 1000000,
+      ":last":now_time.now()
     }
   };
 
@@ -40,8 +39,8 @@ function currentLocation() {
    "#ix": "index",
    },
     ExpressionAttributeValues: {
-      ":first":1552565037028,
-      ":last":1552565074419
+      ":first":now_time.now() - 1000000,
+      ":last":now_time.now()
     }
   };
 
@@ -53,8 +52,8 @@ function currentLocation() {
    "#ix": "index",
    },
     ExpressionAttributeValues: {
-      ":first":1552565046449,
-      ":last":1552565080265
+      ":first":now_time.now() - 1000000,
+      ":last":now_time.now()
     }
   };
 
@@ -73,7 +72,8 @@ function currentLocation() {
       console.log(data.Items);
     }
 
-};
+  };
+
 
 };
 

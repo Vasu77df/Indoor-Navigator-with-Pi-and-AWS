@@ -1,4 +1,5 @@
 var AWS = require("aws-sdk");
+var now_time = require("microtime")
 
 AWS.config.update({
  region: "eu-west-1",
@@ -48,18 +49,29 @@ var params_three = {
 };
 
 console.log("Scanning the databaseone");
-docClient.scan(params_one, onScan);
-console.log("Scanning the databasetwo");
-docClient.scan(params_two, onScan);
-console.log("Scanning the databasethree");
-docClient.scan(params_three, onScan);
-
-function onScan(err,data) {
+docClient.scan(params_one, function(err, data) {
   if (err) {
     console.error("Unable to scan the database. Error JSON:", JSON.stringify(err, null, 2));
   } else {
     console.log("Scan successful.");
     console.log(data.Items);
   }
-
-};
+});
+console.log("Scanning the databasetwo");
+docClient.scan(params_two, function(err, data) {
+  if (err) {
+    console.error("Unable to scan the database. Error JSON:", JSON.stringify(err, null, 2));
+  } else {
+    console.log("Scan successful.");
+    console.log(data.Items);
+  }
+});
+console.log("Scanning the databasethree");
+docClient.scan(params_three, function(err, data) {
+  if (err) {
+    console.error("Unable to scan the database. Error JSON:", JSON.stringify(err, null, 2));
+  } else {
+    console.log("Scan successful.");
+    console.log(data.Items);
+  }
+});

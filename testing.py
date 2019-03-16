@@ -5,15 +5,23 @@ ddb = boto3.resource('dynamodb',
                      region_name='eu-west-1'
                      )
 
-
-table = ddb.Table('threeBdataTable')
-
-response = table.scan(
-    FilterExpression=Attr('time').between(1551008923506, 1551008966690)
+table_one = ddb.Table('threeBdataTable')
+table_two = ddb.Table('threeDataTable')
+table_there = ddb.Table('zeroDataTable')
+response_one = table_one.scan(
+    FilterExpression=Attr('now_time').between(1552565040980, 1552565087912)
 )
 
 
-item = response['Items']
+response_two = table_one.scan(
+    FilterExpression=Attr('now_time').between(1552565037028, 1552565074419)
+)
 
-print(item)
-print(type(item))
+response_three = table_one.scan(
+    FilterExpression=Attr('now_time').between(1552565046449, 1552565080265)
+)
+
+
+print(len(response_one['Items']))
+print(response_two['Items'])
+print(response_three['Items'])
