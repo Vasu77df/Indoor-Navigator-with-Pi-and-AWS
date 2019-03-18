@@ -57,6 +57,8 @@ function currentLocation() {
     }
   };
 
+  var outp;
+
   console.log("Scanning the databaseone");
   docClient.scan(params_one, onScan);
   console.log("Scanning the databasetwo");
@@ -69,6 +71,7 @@ function currentLocation() {
       console.error("Unable to scan the database. Error JSON:", JSON.stringify(err, null, 2));
     } else {
       console.log("Scan successful.");
+      outp = data.items;
       console.log(data.Items);
     }
 

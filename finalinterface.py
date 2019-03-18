@@ -10,13 +10,23 @@ from ask_sdk_model.ui import SimpleCard
 from ask_sdk_model import Response
 
 import boto3
-from boto3.dynamodb.conditions import Key, Attr
-
+from boto3.dynamodb.conditions import Attr
+from statistics import mean
 
 sb = SkillBuilder()
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
+
+def averager(x, y, z):
+    avgx = mean(x)
+
+    avgy = mean(y)
+
+    avgz = mean(z)
+
+    return avgx, avgy, avgz
 
 
 def value_extractor(items):
@@ -36,11 +46,7 @@ def value_extractor(items):
 
     return a
 
-
-def current_loc_finder():
-    import boto3
-    from boto3.dynamodb.conditions import Attr
-
+def table_accessor():
     ddb = boto3.resource('dynamodb',
                          region_name='eu-west-1'
                          )
@@ -48,8 +54,8 @@ def current_loc_finder():
     table_one = ddb.Table('threeBdataTable')
     table_two = ddb.Table('threeDataTable')
     table_three = ddb.Table('zeroDataTable')
-    now_time = int(round(time.time()*1000))
-    past_time = now_time - int(round(time.time()*1000))
+    now_time = int(round(time.time() * 1000))
+    past_time = now_time - 40000
     response_one = table_one.scan(
         FilterExpression=Attr('now_time').between(past_time, now_time)
     )
@@ -64,10 +70,23 @@ def current_loc_finder():
 
     items_one = response_one['Items']
     rssi_list_one = value_extractor(items_one)
+
     items_two = response_two['Items']
     rssi_list_two = value_extractor(items_two)
+
     items_three = response_three['Items']
     rssi_list_three = value_extractor(items_three)
+
+
+    rssi_threeb, rssi_three, rssi_zero = averager(rssi_list_one, rssi_list_two, rssi_list_three)
+
+    return rssi_threeb, rssi_three, rssi_zero
+
+
+def current_loc_finder():
+    threeb, three, zero = table_accessor()
+
+
 
     return location
 
