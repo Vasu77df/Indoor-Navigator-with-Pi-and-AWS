@@ -35,7 +35,7 @@ def rssi_parser(net_out):
         rssi_value = net_out[ssid_pos - 3]
         rssi_value = float(rssi_value)
     else:
-        rssi_value = 100
+        rssi_value = -100
         sleep(5)
     return rssi_value
 
@@ -63,7 +63,7 @@ while True:
     index += 1
     message = {"index": index,
                 "rssi_value_threeB": rssi,
-                "time": milli}
+                "now_time": milli}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
     print('Published topic %s: %s\n' % (topic, messageJson))

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="scanning the table successfully">
+    <list default="true" id="b36fc627-bd2a-4143-98e7-b09bf59c896c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finalinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/finalinterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threeB.py" beforeDir="false" afterPath="$PROJECT_DIR$/threeB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threenode.py" beforeDir="false" afterPath="$PROJECT_DIR$/threenode.py" afterDir="false" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="23" column="48" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="48" />
+            <state relative-caret-position="365">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -29,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/threeB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="267">
+              <caret line="56" column="40" selection-end-line="70" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -44,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zeronode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+            <state relative-caret-position="387">
+              <caret line="64" column="21" selection-end-line="69" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -56,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/threenode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="64" column="33" selection-end-line="70" />
+            <state relative-caret-position="330">
+              <caret line="58" column="11" lean-forward="true" selection-end-line="70" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -93,10 +92,10 @@
         <option value="$PROJECT_DIR$/interfaceskill.js" />
         <option value="$PROJECT_DIR$/algorithm tester.py" />
         <option value="$PROJECT_DIR$/finalinterface.py" />
-        <option value="$PROJECT_DIR$/testing.py" />
-        <option value="$PROJECT_DIR$/threeB.py" />
         <option value="$PROJECT_DIR$/zeronode.py" />
         <option value="$PROJECT_DIR$/threenode.py" />
+        <option value="$PROJECT_DIR$/threeB.py" />
+        <option value="$PROJECT_DIR$/testing.py" />
       </list>
     </option>
   </component>
@@ -206,12 +205,12 @@
       <option name="project" value="LOCAL" />
       <updated>1552229292314</updated>
     </task>
-    <task id="LOCAL-00002" summary="added code">
-      <created>1548590799273</created>
+    <task id="LOCAL-00002" summary="&quot;algorithm adding&quot;">
+      <created>1553080561474</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1548590799273</updated>
+      <updated>1553080561475</updated>
     </task>
     <task id="LOCAL-00003" summary="change wording">
       <created>1548591177640</created>
@@ -367,20 +366,20 @@
       <option name="project" value="LOCAL" />
       <updated>1550999381107</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="27" width="960" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.21344717" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49503312" visible="true" weight="0.21344717" />
       <window_info id="Structure" order="1" sideWeight="0.5049669" side_tool="true" weight="0.1839747" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19438446" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19438446" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -463,7 +462,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="scanning the table successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="scanning the table successfully" />
+    <MESSAGE value="&quot;algorithm adding&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;algorithm adding&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/interfaceskill.js">
@@ -503,30 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zeronode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/threenode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="64" column="33" selection-end-line="70" />
+        <state relative-caret-position="330">
+          <caret line="58" column="11" lean-forward="true" selection-end-line="70" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -535,10 +515,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/threeB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="267">
+          <caret line="56" column="40" selection-end-line="70" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zeronode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="64" column="21" selection-end-line="69" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

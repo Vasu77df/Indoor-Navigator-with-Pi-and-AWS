@@ -77,14 +77,14 @@ def rssi_alogrithm():
     print("average value of pi zero node:\t" + str(c))
     location = ""
 
-    if a >= 20 and a <= 45:
+    if a >= 20 and a <= 50:
         if b >= 80 and a <= 95:
             if c >= 60 and a <= 78:
                 location = "bedroom"
 
     elif c >= 20 and c <= 45:
-        if b >= 50 and b <= 75:
-            if a >= 75 and a <= 95:
+        if b >= 50 and b <= 68:
+            if a >= 68 and a <= 95:
                 location = "middle bedroom"
 
     elif b >= 15 and b <= 55:

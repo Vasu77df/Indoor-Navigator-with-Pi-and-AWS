@@ -84,16 +84,26 @@ def table_accessor():
     return rssi_threeb, rssi_three, rssi_zero
 
 
-def rssi_alogrithm():
+def current_loc_finder():
     a, b, c = table_accessor()
     print("average value of threeB node:\t" + str(a))
     print("average value of pi three node:\t" + str(b))
     print("average value of pi zero node:\t" + str(c))
     location = ""
-    if a >= 20 and a <=35:
+    if a >= 20 and a <= 50:
         if b >= 80 and a <= 95:
-            if c >= 65 and a <= 78:
+            if c >= 60 and a <= 78:
                 location = "bedroom"
+
+    elif c >= 20 and c <= 45:
+        if b >= 50 and b <= 68:
+            if a >= 68 and a <= 95:
+                location = "middle bedroom"
+
+    elif b >= 15 and b <= 55:
+        if c >= 55 and c <= 75:
+            if a >= 75 and a <= 100:
+                location = "hall"
     else:
         location = "nowhere"
 
@@ -109,7 +119,7 @@ class CurrentLocationAndLaunchHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         location = current_loc_finder()
-        speech =  "Right now you are in " + location
+        speech =  "Right now you are near" + location
 
         handler_input.response_builder.speak(speech).set_card(SimpleCard(speech))\
             .set_should_end_session(True)
@@ -127,13 +137,13 @@ class NavigationHandler(AbstractRequestHandler):
         location = current_loc_finder()
         slots = handler_input.request_envelope.request.intent.slots
         current_place = slots["class_no"].value
-        speech = ""
-
-        if current_place == "":
-            handler_input.response_builder.speak(speech).set_should_end_session(False)
+        speech_one = ""
+        speech_two = ""
+        if current_place == "" and location == "":
+            handler_input.response_builder.speak(speech_one).set_should_end_session(False)
             return handler_input.response_builder.response
-        elif current_place == "":
-            handler_input.response_builder.speak(speech).set_should_end_session(False)
+        elif current_place == "" and location == "":
+            handler_input.response_builder.speak(speech_two).set_should_end_session(False)
             return handler_input.response_builder.response
         else:
             handler_input.response_builder.speak("I cannot help you navigate to this place right now")\
