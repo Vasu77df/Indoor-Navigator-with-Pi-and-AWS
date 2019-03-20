@@ -26,7 +26,7 @@ def averager(x, y, z):
 
     avgz = mean(z)
 
-    return avgx, avgy, avgz
+    return abs(int(avgx)), abs(int(avgy)), abs(int(avgz))
 
 
 def value_extractor(items):
@@ -45,6 +45,7 @@ def value_extractor(items):
             a.append(0)
 
     return a
+
 
 def table_accessor():
     ddb = boto3.resource('dynamodb',
@@ -83,10 +84,18 @@ def table_accessor():
     return rssi_threeb, rssi_three, rssi_zero
 
 
-def current_loc_finder():
-    threeb, three, zero = table_accessor()
-
-
+def rssi_alogrithm():
+    a, b, c = table_accessor()
+    print("average value of threeB node:\t" + str(a))
+    print("average value of pi three node:\t" + str(b))
+    print("average value of pi zero node:\t" + str(c))
+    location = ""
+    if a >= 20 and a <=35:
+        if b >= 80 and a <= 95:
+            if c >= 65 and a <= 78:
+                location = "bedroom"
+    else:
+        location = "nowhere"
 
     return location
 
@@ -100,7 +109,7 @@ class CurrentLocationAndLaunchHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         location = current_loc_finder()
-        speech =  "Right now your in the" + location
+        speech =  "Right now you are in " + location
 
         handler_input.response_builder.speak(speech).set_card(SimpleCard(speech))\
             .set_should_end_session(True)
@@ -116,8 +125,8 @@ class NavigationHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         location = current_loc_finder()
-        slots  =  handler_input.request_envelope.request.intent.slots
-        current_place = slots["loaction"].value
+        slots = handler_input.request_envelope.request.intent.slots
+        current_place = slots["class_no"].value
         speech = ""
 
         if current_place == "":

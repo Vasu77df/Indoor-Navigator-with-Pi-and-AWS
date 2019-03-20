@@ -4,13 +4,14 @@ import json
 import subprocess as sb
 from time import sleep
 
-#authentication information and topic name
+# authentication information and topic name
 rootCAPath = "root-CA.crt"
 certificatePath = "PiThreeBNode.cert.pem"
 privateKeyPath = "PiThreeBNode.private.key"
 topic = "rssi/threeB"
 
-#getting rssi values from nearby devices
+
+# getting rssi values from nearby devices
 def get_apinfo():
     '''scans all available wifi networks and returns a list of the ssids and rssi
      values'''
@@ -23,7 +24,8 @@ def get_apinfo():
     net_out = net_out.split()
     return net_out
 
-#filtering the rssi value for only registered ssid
+
+# filtering the rssi value for only registered ssid
 def rssi_parser(net_out):
     ''' parses the list and filters only the rssi value of registered ssid '''
 
@@ -33,12 +35,12 @@ def rssi_parser(net_out):
         rssi_value = net_out[ssid_pos - 3]
         rssi_value = float(rssi_value)
     else:
-        rssi_value = 0
+        rssi_value = 100
         sleep(5)
     return rssi_value
 
 
-#Authenticating connection to AWS IoT
+# Authenticating connection to AWS IoT
 myAWSIoTMQTTClient = AWSIoTMQTTClient("myClientID")
 myAWSIoTMQTTClient.configureEndpoint("a1jgcb96hr49vu-ats.iot.eu-west-1.amazonaws.com", 8883)
 myAWSIoTMQTTClient.configureCredentials(rootCAPath, privateKeyPath, certificatePath)
@@ -60,7 +62,7 @@ while True:
     milli = int(round(time.time()*1000))
     index += 1
     message = {"index": index,
-                "rssi_value_zero": rssi,
+                "rssi_value_threeB": rssi,
                 "time": milli}
     messageJson = json.dumps(message)
     myAWSIoTMQTTClient.publish(topic, messageJson, 1)
