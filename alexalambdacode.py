@@ -86,24 +86,21 @@ def table_accessor():
 
 def current_loc_finder():
     a, b, c = table_accessor()
-    print("average value of threeB node:\t" + str(a))
-    print("average value of pi three node:\t" + str(b))
-    print("average value of pi zero node:\t" + str(c))
     location = ""
     if a >= 20 and a <= 50:
         if b >= 80 and a <= 95:
-            if c >= 60 and a <= 78:
-                location = "bedroom"
+            if c >= 60 and a <= 80:
+                location = "the bedroom"
 
     elif c >= 20 and c <= 45:
-        if b >= 50 and b <= 68:
+        if b >= 50 and b <= 75:
             if a >= 68 and a <= 95:
-                location = "middle bedroom"
+                location = "the middle bedroom"
 
     elif b >= 15 and b <= 55:
         if c >= 55 and c <= 75:
             if a >= 75 and a <= 100:
-                location = "hall"
+                location = "the hall"
     else:
         location = "nowhere"
 
@@ -119,7 +116,7 @@ class CurrentLocationAndLaunchHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         location = current_loc_finder()
-        speech =  "Right now you are near" + location
+        speech =  "Right now you are near" + " " + location
 
         handler_input.response_builder.speak(speech).set_card(SimpleCard(speech))\
             .set_should_end_session(True)

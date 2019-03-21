@@ -1,0 +1,66 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my locator",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel",
+                        "stop "
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "what is this",
+                        "help me",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "cancel",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CurrentLocationIntent",
+                    "slots": [],
+                    "samples": [
+                        "where am I",
+                        "where am I right now",
+                        "where",
+                        "which room am I in",
+                        "which room is this",
+                        "which room"
+                    ]
+                },
+                {
+                    "name": "NavigationIntent",
+                    "slots": [
+                        {
+                            "name": "class_no",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "where is {class_no}",
+                        "navigate to {class_no}",
+                        "take me to {class_no}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
