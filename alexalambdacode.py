@@ -90,17 +90,17 @@ def current_loc_finder():
     if a >= 20 and a <= 50:
         if b >= 80 and a <= 95:
             if c >= 60 and a <= 80:
-                location = "the bedroom"
+                location = "thirteen zero four"
 
     elif c >= 20 and c <= 45:
         if b >= 50 and b <= 75:
             if a >= 68 and a <= 95:
-                location = "the middle bedroom"
+                location = "thirteen zero five"
 
     elif b >= 15 and b <= 55:
         if c >= 55 and c <= 75:
             if a >= 75 and a <= 100:
-                location = "the hall"
+                location = "thirteen zero six"
     else:
         location = "nowhere"
 
@@ -116,10 +116,10 @@ class CurrentLocationAndLaunchHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         location = current_loc_finder()
-        speech =  "Right now you are near" + " " + location
+        speech = "Right now you are near" + " " + location
 
-        handler_input.response_builder.speak(speech).set_card(SimpleCard(speech))\
-            .set_should_end_session(True)
+        handler_input.response_builder.speak(speech).set_card(SimpleCard("My Locator:", speech))\
+            .set_should_end_session(False)
 
         return handler_input.response_builder.response
 
@@ -133,15 +133,77 @@ class NavigationHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         location = current_loc_finder()
         slots = handler_input.request_envelope.request.intent.slots
-        current_place = slots["class_no"].value
-        speech_one = ""
-        speech_two = ""
-        if current_place == "" and location == "":
-            handler_input.response_builder.speak(speech_one).set_should_end_session(False)
-            return handler_input.response_builder.response
-        elif current_place == "" and location == "":
-            handler_input.response_builder.speak(speech_two).set_should_end_session(False)
-            return handler_input.response_builder.response
+        desired_location = slots["class_no"].value
+
+        from_1304__1305 = ""
+        from_1304__1306 = ""
+        from_1304__1204 = ""
+        from_1304__1205 = ""
+        from_1304__1206 = ""
+
+        from_1305__1304 = ""
+        from_1305__1306 = ""
+        from_1305__1204 = ""
+        from_1305__1205 = ""
+        from_1305__1206 = ""
+
+        from_1306__1304 = ""
+        from_1306__1305 = ""
+        from_1306__1204 = ""
+        from_1306__1205 = ""
+        from_1306__1206 = ""
+
+        if location == "":
+            if desired_location == 1305:
+                handler_input.response_builder.speak(from_1304__1305).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1306:
+                handler_input.response_builder.speak(from_1304__1306).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1204:
+                handler_input.response_builder.speak(from_1304__1204).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1205:
+                handler_input.response_builder.speak(from_1304__1205).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1206:
+                handler_input.response_builder.speak(from_1304__1206).set_should_end_session(False)
+                return handler_input.response_builder.response
+
+        if location == "":
+            if desired_location == 1304:
+                handler_input.response_builder.speak(from_1305__1304).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1306:
+                handler_input.response_builder.speak(from_1305__1306).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1204:
+                handler_input.response_builder.speak(from_1305__1204).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1205:
+                handler_input.response_builder.speak(from_1305__1205).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1206:
+                handler_input.response_builder.speak(from_1305__1206).set_should_end_session(False)
+                return handler_input.response_builder.response
+
+        if location == "":
+            if desired_location == 1304:
+                handler_input.response_builder.speak(from_1306__1304).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1305:
+                handler_input.response_builder.speak(from_1306__1305).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1204:
+                handler_input.response_builder.speak(from_1306__1204).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1205:
+                handler_input.response_builder.speak(from_1306__1205).set_should_end_session(False)
+                return handler_input.response_builder.response
+            elif desired_location == 1206:
+                handler_input.response_builder.speak(from_1306__1206).set_should_end_session(False)
+                return handler_input.response_builder.response
+
         else:
             handler_input.response_builder.speak("I cannot help you navigate to this place right now")\
                 .set_should_end_session(False)
@@ -154,7 +216,7 @@ class HelpIntentHandler(AbstractRequestHandler):
         return is_intent_name("AMAZON.HelpIntent")(handler_input)
 
     def handle(self, handler_input):
-        speech_text = "You can ask me where am I right now or to help you navigate to another location"
+        speech_text = "You can ask me, where am I right now ,or to help you navigate to another location"
 
         handler_input.response_builder.speak(speech_text).ask(
             speech_text).set_card(SimpleCard(
@@ -170,10 +232,10 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
 
-        speech_text = "Goodbye!"
+        speech_text = "Goodbye and Good luck, may the force be with you!"
 
         handler_input.response_builder.speak(speech_text).set_card(
-            SimpleCard("Indoor Locator", speech_text))
+            SimpleCard("Indoor Locator:", speech_text))
         return handler_input.response_builder.response
 
 
@@ -187,9 +249,9 @@ class FallbackIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         speech_text = (
-            "The Hello World skill can't help you with that.  "
-            "You can say hello!!")
-        reprompt = "You can say hello!!"
+            "The My Locator skill can't help you with that.  "
+            "You can say where am I?")
+        reprompt = "You can say which room am I in ?"
         handler_input.response_builder.speak(speech_text).ask(reprompt)
         return handler_input.response_builder.response
 
@@ -215,7 +277,7 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 
         logger.error(exception, exc_info=True)
 
-        speech = "Sorry, there was some problem. Please try again!!"
+        speech = "Sorry, there was some problem in My Locator. Please try again!!"
         handler_input.response_builder.speak(speech).ask(speech)
 
         return handler_input.response_builder.response
