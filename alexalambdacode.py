@@ -133,75 +133,102 @@ class NavigationHandler(AbstractRequestHandler):
     def handle(self, handler_input):
         location = current_loc_finder()
         slots = handler_input.request_envelope.request.intent.slots
-        desired_location = slots["class_no"].value
+        desired_location = int(slots["classnumber"].value)
 
-        from_1304__1305 = ""
-        from_1304__1306 = ""
-        from_1304__1204 = ""
-        from_1304__1205 = ""
-        from_1304__1206 = ""
+        from_1304__1305 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero five will be the next room to your right."
+        from_1304__1306 = "Right now you are near thirteen zero four,exit thirteen zero four and thirteen zero six will be the second room to your right."
+        from_1304__1204 = "Right now you are near thirteen zero four,"
+        from_1304__1205 = "Right now you are near thirteen zero four,"
+        from_1304__1206 = "Right now you are near thirteen zero four,"
 
-        from_1305__1304 = ""
-        from_1305__1306 = ""
-        from_1305__1204 = ""
-        from_1305__1205 = ""
-        from_1305__1206 = ""
+        from_1305__1304 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero four will be the next room to your left."
+        from_1305__1306 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero six will be the next room to your right."
+        from_1305__1204 = "Right now you are near thirteen zero five,"
+        from_1305__1205 = "Right now you are near thirteen zero five,"
+        from_1305__1206 = "Right now you are near thirteen zero five,"
 
-        from_1306__1304 = ""
-        from_1306__1305 = ""
-        from_1306__1204 = ""
-        from_1306__1205 = ""
-        from_1306__1206 = ""
+        from_1306__1304 = "Right now you are near thirteen zero six,"
+        from_1306__1305 = "Right now you are near thirteen zero six,"
+        from_1306__1204 = "Right now you are near thirteen zero six,"
+        from_1306__1205 = "Right now you are near thirteen zero six,"
+        from_1306__1206 = "Right now you are near thirteen zero six,"
 
-        if location == "":
+        if location == "thirteen zero four":
             if desired_location == 1305:
-                handler_input.response_builder.speak(from_1304__1305).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1304__1305).set_card(SimpleCard("My Locator:", from_1304__1305))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1306:
-                handler_input.response_builder.speak(from_1304__1306).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1304__1306).set_card(SimpleCard("My Locator:", from_1304__1306))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1204:
-                handler_input.response_builder.speak(from_1304__1204).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1304__1204).set_card(SimpleCard("My Locator:", from_1304__1204))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1205:
-                handler_input.response_builder.speak(from_1304__1205).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1304__1205).set_card(SimpleCard("My Locator:", from_1304__1205))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1206:
-                handler_input.response_builder.speak(from_1304__1206).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1304__1206).set_card(SimpleCard("My Locator:", from_1304__1206))\
+                    .set_should_end_session(False)
+                return handler_input.response_builder.response
+            else:
+                handler_input.response_builder.speak("you cannot go from thirteen zero four to this place right now") \
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
 
-        if location == "":
+        if location == "thirteen zero five":
             if desired_location == 1304:
-                handler_input.response_builder.speak(from_1305__1304).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1305__1304).set_card(SimpleCard("My Locator:", from_1305__1304))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1306:
-                handler_input.response_builder.speak(from_1305__1306).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1305__1306).set_card(SimpleCard("My Locator:", from_1305__1306))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1204:
-                handler_input.response_builder.speak(from_1305__1204).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1305__1204).set_card(SimpleCard("My Locator:", from_1305__1204))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1205:
-                handler_input.response_builder.speak(from_1305__1205).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1305__1205).set_card(SimpleCard("My Locator:", from_1305__1205))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1206:
-                handler_input.response_builder.speak(from_1305__1206).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1305__1206).set_card(SimpleCard("My Locator:", from_1305__1206))\
+                    .set_should_end_session(False)
+                return handler_input.response_builder.response
+            else:
+                handler_input.response_builder.speak("you cannot go from thirteen zero five to this place right now") \
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
 
-        if location == "":
+        if location == "thirteen zero six":
             if desired_location == 1304:
-                handler_input.response_builder.speak(from_1306__1304).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1306__1304).set_card(SimpleCard("My Locator:", from_1306__1304))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1305:
-                handler_input.response_builder.speak(from_1306__1305).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1306__1305).set_card(SimpleCard("My Locator:", from_1306__1305))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1204:
-                handler_input.response_builder.speak(from_1306__1204).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1306__1204).set_card(SimpleCard("My Locator:", from_1306__1204))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1205:
-                handler_input.response_builder.speak(from_1306__1205).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1306__1205).set_card(SimpleCard("My Locator:", from_1306__1205))\
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
             elif desired_location == 1206:
-                handler_input.response_builder.speak(from_1306__1206).set_should_end_session(False)
+                handler_input.response_builder.speak(from_1306__1206).set_card(SimpleCard("My Locator:", from_1306__1206))\
+                    .set_should_end_session(False)
+                return handler_input.response_builder.response
+            else:
+                handler_input.response_builder.speak("you cannot go from thirteen zero six to this place right now") \
+                    .set_should_end_session(False)
                 return handler_input.response_builder.response
 
         else:
