@@ -88,18 +88,18 @@ def current_loc_finder():
     a, b, c = table_accessor()
     location = ""
     if a >= 20 and a <= 50:
-        if b >= 80 and a <= 95:
-            if c >= 60 and a <= 80:
-                location = "thirteen zero four"
-
-    elif c >= 20 and c <= 45:
-        if b >= 50 and b <= 75:
-            if a >= 68 and a <= 95:
+        if b >= 60 and a <= 85:
+            if c >= 40 and c <= 75:
                 location = "thirteen zero five"
 
-    elif b >= 15 and b <= 55:
-        if c >= 55 and c <= 75:
-            if a >= 75 and a <= 100:
+    elif c >= 20 and c <= 55:
+        if b >= 65 and b <= 100:
+            if a >= 50 and a <= 65:
+                location = "thirteen zero four"
+
+    elif b >= 20 and b <= 60:
+        if c >= 70 and c <= 100:
+            if a >= 50 and a <= 75:
                 location = "thirteen zero six"
     else:
         location = "nowhere"
@@ -136,7 +136,7 @@ class NavigationHandler(AbstractRequestHandler):
         desired_location = int(slots["classnumber"].value)
 
         from_1304__1305 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero five will be the next room to your right."
-        from_1304__1306 = "Right now you are near thirteen zero four,exit thirteen zero four and thirteen zero six will be the second room to your right."
+        from_1304__1306 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero six will be the second room to your right."
         from_1304__1204 = "Right now you are near thirteen zero four,"
         from_1304__1205 = "Right now you are near thirteen zero four,"
         from_1304__1206 = "Right now you are near thirteen zero four,"

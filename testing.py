@@ -66,36 +66,34 @@ def table_accessor():
     print("list of values scanned by pi zero node:" + str(rssi_list_three))
 
     rssi_threeB, rssi_three, rssi_zero = averager(rssi_list_one, rssi_list_two, rssi_list_three)
+    print(rssi_threeB)
+    print(rssi_three)
+    print(rssi_zero)
 
     return rssi_threeB, rssi_three, rssi_zero
 
 
 def rssi_alogrithm():
     a, b, c = table_accessor()
-    print("average value of threeB node:\t" + str(a))
-    print("average value of pi three node:\t" + str(b))
-    print("average value of pi zero node:\t" + str(c))
     location = ""
-
     if a >= 20 and a <= 50:
-        if b >= 80 and a <= 95:
-            if c >= 60 and a <= 78:
-                location = "bedroom"
+        if b >= 60 and a <= 85:
+            if c >= 40 and c <= 75:
+                location = "thirteen zero five"
 
-    elif c >= 20 and c <= 45:
-        if b >= 50 and b <= 68:
-            if a >= 68 and a <= 95:
-                location = "middle bedroom"
+    elif c >= 20 and c <= 55:
+        if b >= 65 and b <= 100:
+            if a >= 50 and a <= 65:
+                location = "thirteen zero four"
 
-    elif b >= 15 and b <= 55:
-        if c >= 55 and c <= 75:
-            if a >=75 and a<=100:
-                location = "hall"
+    elif b >= 20 and b <= 60:
+        if c >= 70 and c <= 100:
+            if a >= 50 and a <= 75:
+                location = "thirteen zero six"
     else:
         location = "nowhere"
 
     return location
-
 
 if __name__ == '__main__':
     loc = rssi_alogrithm()
