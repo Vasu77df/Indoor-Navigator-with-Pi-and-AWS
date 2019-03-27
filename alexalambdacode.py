@@ -95,12 +95,12 @@ def current_loc_finder():
     elif c >= 20 and c <= 55:
         if b >= 65 and b <= 100:
             if a >= 50 and a <= 65:
-                location = "thirteen zero four"
+                location = "thirteen zero six"
 
     elif b >= 20 and b <= 60:
         if c >= 70 and c <= 100:
             if a >= 50 and a <= 75:
-                location = "thirteen zero six"
+                location = "thirteen zero four"
     else:
         location = "nowhere"
 
@@ -135,23 +135,23 @@ class NavigationHandler(AbstractRequestHandler):
         slots = handler_input.request_envelope.request.intent.slots
         desired_location = int(slots["classnumber"].value)
 
-        from_1304__1305 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero five will be the next room to your right."
-        from_1304__1306 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero six will be the second room to your right."
-        from_1304__1204 = "Right now you are near thirteen zero four,"
-        from_1304__1205 = "Right now you are near thirteen zero four,"
-        from_1304__1206 = "Right now you are near thirteen zero four,"
+        from_1304__1305 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero five will be the next room to your left"
+        from_1304__1306 = "Right now you are near thirteen zero four, exit thirteen zero four and thirteen zero six will be the second room to your left"
+        from_1304__1204 = "Right now you are near thirteen zero four, exit thirteen zero four, take the stair to your right to climb down and twelve zero four will be the first room near the stair"
+        from_1304__1205 = "Right now you are near thirteen zero four, exit thirteen zero four, take the stair to your right to climb down and twelve zero five will be the second room from the stair"
+        from_1304__1206 = "Right now you are near thirteen zero four, exit thirteen zero four, take the stair to your right to climb down and twelve zero six will be the third room from the stair"
 
-        from_1305__1304 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero four will be the next room to your left."
-        from_1305__1306 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero six will be the next room to your right."
-        from_1305__1204 = "Right now you are near thirteen zero five,"
-        from_1305__1205 = "Right now you are near thirteen zero five,"
-        from_1305__1206 = "Right now you are near thirteen zero five,"
+        from_1305__1304 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero four will be the next room to your right"
+        from_1305__1306 = "Right now you are near thirteen zero five, exit thirteen zero five and thirteen zero six will be the next room to your left"
+        from_1305__1204 = "Right now you are near thirteen zero five, exit thirteen zero five, take the stair to your left to climb down and twelve zero six will be the first room near the stair"
+        from_1305__1205 = "Right now you are near thirteen zero five, exit thirteen zero five, take the stair to your left to climb down and twelve zero five will be the second room from the stair"
+        from_1305__1206 = "Right now you are near thirteen zero five, exit thirteen zero five, take the stair to your left to climb down and twelve zero four will be the third room from the stair"
 
-        from_1306__1304 = "Right now you are near thirteen zero six,"
-        from_1306__1305 = "Right now you are near thirteen zero six,"
-        from_1306__1204 = "Right now you are near thirteen zero six,"
-        from_1306__1205 = "Right now you are near thirteen zero six,"
-        from_1306__1206 = "Right now you are near thirteen zero six,"
+        from_1306__1304 = "Right now you are near thirteen zero six, exit thirteen zero six and thirteen zero five will be the next room to your right"
+        from_1306__1305 = "Right now you are near thirteen zero six, exit thirteen zero six and thirteen zero four will be the second room to your right"
+        from_1306__1204 = "Right now you are near thirteen zero six, exit thirteen zero six, take the stair to your left to climb down and twelve zero six will be the first room near the stair"
+        from_1306__1205 = "Right now you are near thirteen zero six, exit thirteen zero six, take the stair to your left to climb down and twelve zero five will be the second room from the stair"
+        from_1306__1206 = "Right now you are near thirteen zero six, exit thirteen zero six, take the stair to your left to climb down and twelve zero four will be the third room from the stair"
 
         if location == "thirteen zero four":
             if desired_location == 1305:
