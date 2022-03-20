@@ -1,4 +1,4 @@
-# indoor_pos
+# Indoor-Navigator-with-Pi-and-AWS
 
 # Problem Statement
 
